@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Summarizer</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>YouTube Transcript Summarizer</h1>
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="Search YouTube videos..." onkeypress="handleKeyPress(event)">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+
+    
+    <div id="video-container"></div>
+
+  
+   <!-- Summary Display -->
+   <div id="summary-section" style="display: none;">
+    <h2>Video Summary</h2>
+    <p id="summary-text">No summary available.</p>
+
+    <!-- Language Dropdown -->
+    <div class="translation-container">
+        <label for="language-select">Translate To:</label>
+        <select id="language-select" onchange="translateSummary()">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="mr">Marathi</option>
+            
+        </select>
+    </div>
+</div>
+
+    <script src="scripts.js"></script> 
+</body>
+</html>
